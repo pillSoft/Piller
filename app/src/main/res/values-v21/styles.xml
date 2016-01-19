@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:colorControlHighlight">@color/accent_translucent</item> 
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+    </style>
+
+    <style name="Settings" parent="AppTheme">
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
+
+    <style name="drawerTheme" parent="android:Theme.Material">
+        <item name="android:background">@color/common_background</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+
+
+
+    </style>
+
+
+</resources>

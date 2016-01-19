@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Piller</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="title_activity_cm_theme">Cm Themes</string>
+    <string name="title_activity_theme">Theme</string>
+    <string name="title_activity_gallery">Gallery</string>
+    <string name="title_activity_changelogs">Changelogs</string>
+
+
+    <!-- Developer String -->
+    <string name="developer_email" translatable="false">fagioli.giulio@gmail.com</string>
+    <!-- End Developer String -->
+
+    <!-- String of Drawer's items -->
+    <string name="home_item">Home</string>
+    <string name="cm_item">Cm Themes</string>
+    <string name="rro_item">Rro Themes</string>
+    <string name="settings_item">About</string>
+    <!-- End String of Drawer's items -->
+
+    <!-- MainCardView String -->
+    <string name="more_changelog_card_mainactivity">More</string>
+    <string name="report_card_mainactivity">Report</string>
+    <string name="changelogs_card_mainactivity">Changelogs</string>
+    <!-- End MainCardView -->
+
+    <!-- String of Changelogs Activity and Changelos cards -->
+    <string name="title_card_changelogs" translatable="false">Changelog</string>
+    <string name="version_card_changelogs">Version:</string>
+    <string name="date_card_changelogs">Date: </string>
+    <!-- End String of Changelogs Activity and Changelos cards -->
+
+    <!-- Theme activity Strings -->
+    <!-- Card -->
+    <string name="version_card_themeactivity">version: </string>
+    <!-- End String of Card -->
+
+    <!-- Snackbar -->
+    <string name="update_snackbar_themeactivity">New version available click on fab to install it! </string>
+    <!-- End Snackbar -->
+    <!-- End String of Theme activity Activity and Theme activity cards -->
+
+
+    <!-- About Fragment String -->
+    <!-- Developer Card-->
+    <string name="name_card_dev" translatable="false">pillSoft</string>
+    <string name="body_card_dev">
+        <![CDATA[
+        pillSoft is a small developers team composed composed :<br>
+        <b>Giulio Fagioli</b> love Android, Graphics and Opensource<br>
+        <b>Lorenzo Salani</b> love Programming, Hardware and Lucci
+        ]]>
+       </string>
+    <!-- End Developer Card-->
+    <!-- About Fragment String -->
+
+    <!-- No Layers manager installed for manage rro themes -->
+    <string name="rro_dialog_nolayersmanager_title">No Layers manager installed!</string>
+    <string name="rro_dialog_nolayersmanager_body">Remember, to use the themes rro you need a layer manager.\nRight now you have not installed any layer manager\nYou want to install one?</string>
+    <string name="rro_dialog_nolayersmanager_positive">Go to playstore</string>
+    <string name="rro_dialog_nolayersmanager_negative">No thanks!</string>
+    <string name="rro_dialog_nolayersmanager_neutral" translatable="false">Not now</string>
+    <!-- End no Layers Manager installed -->
+    <string name="no_rro_theme">At this time we are not available rro themes</string>
+    <string name="twice_back_click">Press again to exit</string>
+    <!-- Error String -->
+
+
+</resources>

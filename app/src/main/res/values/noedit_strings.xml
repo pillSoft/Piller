@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- About Fragment String -->
+    <!-- Piller Card -->
+    <string name="title_card_piller" translatable="false">Piller (v1) </string>
+    <string name="site_button_card_piller">Site</string>
+    <string name="googleplus_button_card_piller" translatable="false">Google Plus</string>
+    <string name="googleplus_tag_button_card_piller" translatable="false">https://plus.google.com/collection/80tYX</string>
+    <string name="github_button_card_piller" translatable="false">Github</string>
+    <string name="github_tag_button_card_piller" translatable="false">https://github.com/pillSoft/Piller</string>
+    <string name="body_card_piller">
+        <![CDATA[
+        This Application was developed by <b>pillSoft</b>: a small developers team composed by <b>Giulio Fagioli</b> and <b>Lorenzo Salani</b>.<br>Licensed under GNU GPL
+        ]]>
+       </string>
+    <!-- End Piller Card -->
+    <!-- End About Fragment String-->
+
+    <!-- Rro layers manager package-->
+    <string name="rro_layers_manager" translatable="false">com.lovejoy777.rroandlayersmanager</string>
+    <!-- End Rro package-->
+
+    <!-- Error String-->
+    <string name="cant_load_res">Can not load resources</string>
+    <string name="cant_load_new_res">Error loading new resources</string>
+    <string name="cant_find_package">Cannot find package!</string>
+    <string name="cant_mount_obb">Unmounting main file failed with state = </string>
+    <string name="cant_read_xml">Can not read xml file </string>
+    <string name="no_changelogs">There aren\'t changelogs\nChangelogs are indispensable\nReport to developer</string>
+    <string name="no_changelogs_email" translatable="false">Changelogs are indispensable\nAdd to</string>
+    <string name="failed_copy_asset">Failed to copy asset file:</string>
+    <string name="file_not_found">File not found</string>
+    <string name="error_parsing_apk">Error parsing apk:</string>
+    <string name="error_unknown_type">Unknown theme type added(Insert Cm or Rro)</string>
+    ""
+    <string name="mounting_failed">Mounting main file failed with state:</string>
+
+    <!-- End Error String-->
+
+    <!-- Correct Result String-->
+    <string name="success_load_res">Resources saved</string>
+    <string name="no_required_download">Download not required</string>
+    <string name="lvl_required">LVL check required</string>
+    <string name="required_download">Download required</string>
+    <string name="unmounting_done">Unmounting main file done</string>
+    <!-- End Correct Result String-->
+</resources>

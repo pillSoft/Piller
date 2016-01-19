@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Themes>
+    <Theme>
+        <Name>Lin Family</Name>
+        <Motto>Giulio Fagioli</Motto>
+        <Package>me.giuliofagioli.linFamily</Package>
+        <BackgroundColor>#009688</BackgroundColor>
+    </Theme>
+    <Theme>
+        <Name>Dew</Name>
+        <Motto>Giulio Fagioli</Motto>
+        <Package>com.thearclabs.polycon</Package>
+        <BackgroundImage>advise1</BackgroundImage>
+    </Theme>
+</Themes>

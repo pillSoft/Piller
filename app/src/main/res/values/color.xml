@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#f7f7f7</color>
+    <color name="black">#000</color>
+    <!-- Common color for textview -->
+    <color name="common_textview">@color/white</color>
+    <color name="common_background">@color/white</color>
+    <!-- Color for text about Tile MainActivity -->
+    <color name="tile_textview">@color/common_textview</color>
+    <!-- Color for application theme -->
+    <color name="primary">#009688</color>
+    <color name="accent">@color/material_deep_teal_500</color>
+    <color name="accent_translucent">@color/material_deep_teal_500</color>
+    <color name="primary_dark">#00897B</color>
+
+
+    <!-- Card proprieties -->
+
+    <!-- Title proprieties -->
+    <color name="card_title_text_color">#212121</color>
+    <!-- End Title proprieties -->
+    <!-- Subtitle proprieties -->
+    <color name="card_subtitle_text_color">#212121</color>
+    <!-- End Subtitle proprieties -->
+
+    <!-- Piller card on About fragment -->
+    <!-- End Piller card -->
+    <!-- End Card proprieties -->
+
+
+</resources>

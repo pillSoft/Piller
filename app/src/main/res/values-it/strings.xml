@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Piller</string>
+    <string name="cant_find_package">Impossibile trovare il package!</string>
+    <string name="cant_load_new_res">Errore caricamento nuove risorse</string>
+    <string name="cant_load_res">Impossibile caricare le risorse</string>
+    <string name="cant_mount_obb">Smontaggio del file principale fallito , stato:</string>
+    <string name="cant_read_xml">Impossibile leggere il file xml</string>
+    <string name="changelogs_card_mainactivity">Aggiornamenti</string>
+    <string name="cm_item">Temi Cm</string>
+    <string name="date_card_changelogs">Data:</string>
+    <string name="error_parsing_apk">Errore analisi apk:</string>
+    <string name="error_unknown_type">Tipo sconosciuto inserito(Inserire Cm o Rro)</string>
+    <string name="failed_copy_asset">Impossibile copiare i file assets:</string>
+    <string name="file_not_found">File non trovato</string>
+    <string name="home_item">Home</string>
+    <string name="lvl_required">Controllo licenza richiesto</string>
+    <string name="more_changelog_card_mainactivity">Scopri</string>
+    <string name="mounting_failed">Montaggio del file principale fallito , stato:</string>
+    <string name="no_changelogs">Non ci sono descrizioni degli aggiornamenti\nI changelogs sono indispensabili\nDillo allo sviluppatore</string>
+    <string name="report_card_mainactivity">Segnala</string>
+    <string name="no_required_download">Scaricamento non richiesto</string>
+    <string name="required_download">Scaricamento richiesto</string>
+    <string name="rro_item">Temi Rro</string>
+    <string name="settings_item">Informazioni</string>
+    <string name="site_button_card_piller">Sito</string>
+    <string name="success_load_res">Risorse salvate</string>
+    <string name="title_activity_changelogs">Storico aggiornamenti</string>
+    <string name="title_activity_cm_theme">Temi Cm</string>
+    <string name="title_activity_gallery">Galleria</string>
+    <string name="title_activity_theme">Tema</string>
+    <string name="unmounting_done">Smontaggio file principale finito</string>
+    <string name="update_snackbar_themeactivity">Nuova versione disponibile clicca sul bottone rotondo per installarlo</string>
+    <string name="version_card_changelogs">Versione:</string>
+    <string name="version_card_themeactivity">versione:</string>
+    <string name="twice_back_click">Premi ancora indietro per uscire</string>
+    <string name="body_card_dev"><![CDATA[         La pillSoft è un piccolo gruppo di sviluppatori composto da:<br>         <b>Giulio Fagioli</b> ama Android , Design e l\'Opensource<br>         <b>Lorenzo Salani</b> ama Programmare , l\'Hardware e i Lucci        ]]></string>
+    <string name="body_card_piller"><![CDATA[         Questa applicazione è stata sviluppata da <b>pillSoft</b>: un piccolo gruppo di sviluppatori composto da  <b>Giulio Fagioli</b> e <b>Lorenzo Salani</b>.<br>Sotto licenza GNU GPL</a>]]></string>
+    <string name="rro_dialog_nolayersmanager_body">Ricorda , per usare i temi rro hai bisogno di un layers manager.\nIn questo momento non hai installato alcun layers manager\nVuoi installarne uno?</string>
+    <string name="rro_dialog_nolayersmanager_negative">No grazie!</string>
+    <string name="rro_dialog_nolayersmanager_positive">Vai al playstore</string>
+    <string name="rro_dialog_nolayersmanager_title">Nessun Layers manager installato!</string>
+    <string name="no_rro_theme">In questo momento non sono disponibili temi rro</string>
+</resources>

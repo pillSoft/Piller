@@ -1,0 +1,22 @@
+<Themes>
+	<Theme>
+		<Name>Lin Purple</Name>
+		<Package>me.giuliofagioli.linPurple</Package>
+		<Type>Cm</Type>
+		<Color>#673AB7</Color>
+		<DarkColor>#4527A0</DarkColor>
+		<AccentColor>#9C27B0</AccentColor>
+		<HighlightedColor>#673AB7</HighlightedColor>
+		<Motto>Simply,Clean and Awesome! Teal!</Motto>
+	</Theme>
+	<Theme>
+		<Name>Lin Teal</Name>
+		<Package>me.giuliofagioli.linTeal</Package>
+		<Type>Cm</Type>
+		<Color>#009688</Color>
+		<DarkColor>#00796B</DarkColor>
+		<AccentColor>#00BCD4</AccentColor>
+		<HighlightedColor>#009688</HighlightedColor>
+		<Motto>Simply,Clean and Awesome! Teal!</Motto>
+	</Theme>
+</Themes>

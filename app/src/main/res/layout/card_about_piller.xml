@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:elevation="2dp"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="2dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:id="@+id/card_settings">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/card_subtitle_text_color"
+            android:textSize="@dimen/card_title_text_size"
+            android:text="@string/title_card_piller"
+            android:layout_marginTop="@dimen/card_title_top_padding"
+            android:layout_marginLeft="@dimen/card_title_left_padding"
+            android:layout_marginRight="@dimen/card_title_left_padding" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/body_card_piller"
+            android:id="@+id/body_card"
+            android:textColor="@color/card_subtitle_text_color"
+            android:textSize="@dimen/card_subtitle_text_size"
+            android:layout_marginTop="@dimen/card_subtitle_top_padding"
+            android:layout_marginLeft="@dimen/card_subtitle_left_padding"
+            android:layout_marginRight="@dimen/card_subtitle_left_padding"
+            android:layout_marginBottom="@dimen/card_subtitle_bottom_padding" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|right">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/googleplus_button_card_piller"
+                android:id="@+id/plus_button"
+                android:layout_gravity="right"
+                android:enabled="true"
+                android:tag="@string/googleplus_tag_button_card_piller"
+                android:layout_marginBottom="12dp"
+                android:nestedScrollingEnabled="false"
+                android:onClick="onClick_card"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="2dp"
+                android:layout_marginRight="@dimen/card_button_left_margin" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/github_button_card_piller"
+                android:id="@+id/github_button"
+                android:enabled="true"
+                android:tag="@string/github_tag_button_card_piller"
+                android:layout_marginBottom="12dp"
+                android:onClick="onClick_card"
+                android:background="?android:attr/selectableItemBackground" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

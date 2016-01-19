@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Changelogs>
+    <Change>
+        <VersionName>1</VersionName>
+        <VersionCode>1</VersionCode>
+        <Description>First Release of piller 2.0</Description>
+        <Date>18/01/16</Date>
+    </Change>
+	<Change>
+        <VersionName>Test Changelog</VersionName>
+        <VersionCode>2</VersionCode>
+        <Description>Demonstrate how to add more than one </Description>
+        <Date>18/01/16</Date>
+    </Change>
+</Changelogs>
