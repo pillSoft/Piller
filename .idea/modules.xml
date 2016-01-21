@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Piller.iml" filepath="$PROJECT_DIR$/Piller.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/downloader_library/downloader_library.iml" filepath="$PROJECT_DIR$/downloader_library/downloader_library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/duo.iml" filepath="$PROJECT_DIR$/duo.iml" />
       <module fileurl="file://$PROJECT_DIR$/licensing/licensing.iml" filepath="$PROJECT_DIR$/licensing/licensing.iml" />
     </modules>
   </component>
