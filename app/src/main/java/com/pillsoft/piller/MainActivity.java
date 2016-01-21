@@ -49,7 +49,6 @@ import com.google.android.vending.expansion.downloader.Helpers;
 import com.google.android.vending.expansion.downloader.IDownloaderClient;
 import com.google.android.vending.expansion.downloader.IDownloaderService;
 import com.google.android.vending.expansion.downloader.IStub;
-import com.pillsoft.piller.Adapter.CustomPagerAdapter;
 import com.pillsoft.piller.Adapter.MainViewCardAdapter;
 import com.pillsoft.piller.Fragment.HomeFragment;
 import com.pillsoft.piller.Fragment.OnFragmentInteractionListener;
@@ -72,12 +71,12 @@ public class MainActivity extends AppCompatActivity implements IDownloaderClient
 
     //region
 
-    public static final String key = "Giulio96";
+    public static final String key = "MySecretKeyDontshare";
 
     private final XAPKFile[] xAPKS = {// variable that identify the .obb file downloaded
             new XAPKFile(
                     true, // is a main file?
-                    2, // the version of the obb file, must be equal to the application version
+                    BuildConfig.VERSION_CODE, // the version of the obb file, must be equal to the application version
                     35848250 // the length of the .obb file in bytes
             )
     };
@@ -178,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements IDownloaderClient
     }
 
 
-    private void isDownloaded(){
+    private void isDownloaded() {
         om.mountMain(new OnObbStateChangeListener() {
             @Override
             public void onObbStateChange(String path, int state) {
@@ -351,7 +350,7 @@ public class MainActivity extends AppCompatActivity implements IDownloaderClient
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                doubleBackToExitPressedOnce=false;
+                doubleBackToExitPressedOnce = false;
             }
         }, 2000);
     }
@@ -359,6 +358,7 @@ public class MainActivity extends AppCompatActivity implements IDownloaderClient
     private void initToolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle(R.string.home_item);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -388,14 +388,14 @@ public class MainActivity extends AppCompatActivity implements IDownloaderClient
                         }
                         break;
                     case R.id.rro_item:
-//                        if (!appLimitedByDownload) {
-//                            if (rroFragment == null)
-//                                rroFragment = ThemeFragment.newInstance(mainActivity, s.RROTAG);
-//                            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, rroFragment).commit();
-//                        } else {
-//                            Snackbar.make(content, "File non ancora scaricati",
-//                                    Snackbar.LENGTH_SHORT).show();
-//                        }
+                        if (!appLimitedByDownload) {
+                            if (rroFragment == null)
+                                rroFragment = ThemeFragment.newInstance(mainActivity, s.RROTAG);
+                            getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, rroFragment).commit();
+                        } else {
+                            Snackbar.make(content, "File non ancora scaricati",
+                                    Snackbar.LENGTH_SHORT).show();
+                        }
                         Snackbar.make(content, getString(R.string.no_rro_theme),
                                 Snackbar.LENGTH_LONG).show();
                         break;
@@ -603,170 +603,6 @@ public class MainActivity extends AppCompatActivity implements IDownloaderClient
         browserIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         MainActivity.context.startActivity(browserIntent);
     }
-
-    //endregion
-
-    //region comment code
-
-    /*
-    timer = new Timer();
-    myTimerTask = new MyTimerTask();
-    timer.schedule(myTimerTask, 0, 1);
-
-    class MyTimerTask extends TimerTask {
-        @Override
-        public void run() {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    long millis = System.currentTimeMillis() - g.getStartTime();
-                    String strDate = g.getDateFromMillis(millis);
-                    txt_timer.setText(getResources().getString(R.string.timer) + "  " + strDate);
-                }
-            });
-        }
-    }
-    */
-
-
-/*
-    createDotDir(".Cucciolo");
-    private boolean createDotDir(String path) {
-        boolean ret = true;
-
-        File file = new File(Environment.getExternalStorageDirectory(), path);
-        if (!file.exists()) {
-            if (!file.mkdirs()) {
-                Log.e("TravellerLog :: ", "Problem creating Image folder");
-                ret = false;
-            }
-        }
-        return ret;
-    }
-*/
-
-    /*
-    XmlDownloadTask downloadTask = new XmlDownloadTask(this);
-    private final String urlThemes = "http://piller.pillsoft.com/Themes.xml";
-    downloadTask.execute(urlThemes);
-    mProgressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-        @Override
-        public void onCancel(DialogInterface dialog) {
-            downloadTask.cancel(true);
-        }
-    });
-    private class XmlDownloadTask extends AsyncTask<String, Integer, String> {
-
-        private Context context;
-        private PowerManager.WakeLock mWakeLock;
-        private String xml = "";
-
-        public XmlDownloadTask(Context context) {
-            this.context = context;
-        }
-
-        @Override
-        protected String doInBackground(String... sUrl) {
-            InputStream input = null;
-            OutputStream output = null;
-            HttpURLConnection connection = null;
-            try {
-                URL url = new URL(sUrl[0]);
-                connection = (HttpURLConnection) url.openConnection();
-                connection.connect();
-
-                // expect HTTP 200 OK, so we don't mistakenly save error report
-                // instead of the file
-                if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
-                    return "Server returned HTTP " + connection.getResponseCode()
-                            + " " + connection.getResponseMessage();
-                }
-
-                // this will be useful to display download percentage
-                // might be -1: server did not report the length
-                int fileLength = connection.getContentLength();
-
-                // download the file
-                input = connection.getInputStream();
-
-                //output = new FileOutputStream("/sdcard/Themes.xml");
-
-                byte data[] = new byte[4096];
-                long total = 0;
-                int count;
-                while ((count = input.read(data)) != -1) {
-                    // allow canceling with back button
-                    if (isCancelled()) {
-                        input.close();
-                        return null;
-                    }
-                    total += count;
-
-                    if (fileLength > 0) // only if total length is known
-                        publishProgress((int) (total * 100 / fileLength));
-                    //output.write(data, 0, count);
-                    xml = new String(data, "UTF-8");
-
-                }
-
-                //Log.i("xml", xml);
-
-            } catch (Exception e) {
-                return e.toString();
-            } finally {
-                try {
-                    if (output != null)
-                        output.close();
-                    if (input != null)
-                        input.close();
-                } catch (IOException ignored) {
-                }
-
-                if (connection != null)
-                    connection.disconnect();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            // take CPU lock to prevent CPU from going off if the user
-            // presses the power button during download
-            PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-            mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
-                    getClass().getName());
-            mWakeLock.acquire();
-            mProgressDialog.show();
-        }
-
-        @Override
-        protected void onProgressUpdate(Integer... progress) {
-            super.onProgressUpdate(progress);
-            // if we get here, length is known, now set indeterminate to false
-            mProgressDialog.setIndeterminate(false);
-            mProgressDialog.setMax(100);
-            mProgressDialog.setProgress(progress[0]);
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            mWakeLock.release();
-            mProgressDialog.dismiss();
-            saveXmlThemes(xml);
-            if (result != null)
-                Toast.makeText(context, "Download error: " + result, Toast.LENGTH_LONG).show();
-            else
-                Toast.makeText(context, "Risorse scaricate", Toast.LENGTH_SHORT).show();
-            startObbManager();
-        }
-
-    }
-
-    */
-    //endregion
-
-
 
 
 }

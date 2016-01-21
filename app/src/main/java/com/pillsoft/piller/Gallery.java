@@ -45,10 +45,6 @@ public class Gallery extends AppCompatActivity implements OnFragmentInteractionL
         themeName = getIntent().getStringExtra("themeName");
         index = getIntent().getIntExtra("index", -1);
         resources = getIntent().getIntArrayExtra("resources");
-//        mCustomPagerAdapter = new CustomPagerAdapter(this,s.galleryList);
-//        mViewPager = (ViewPager) findViewById(R.id.pager);
-//        mViewPager.setAdapter(mCustomPagerAdapter);
-//        mViewPager.setCurrentItem(index,true);
 
         MyPagerAdapter adapter = null;
         if (resources != null) {

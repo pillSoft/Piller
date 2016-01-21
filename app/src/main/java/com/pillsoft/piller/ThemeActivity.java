@@ -131,7 +131,9 @@ public class ThemeActivity extends AppCompatActivity {
         }
         setSupportActionBar(toolbar);
 
-        TextView card_theme_motto = (TextView) findViewById(R.id.date);
+        TextView card_theme_date = (TextView) findViewById(R.id.date);
+        card_theme_date.setText(theme.getTheme_type());
+        TextView card_theme_motto = (TextView) findViewById(R.id.version);
         card_theme_motto.setText(theme.getTheme_motto());
 
         card_theme_version = (TextView) findViewById(R.id.version);
@@ -142,16 +144,10 @@ public class ThemeActivity extends AppCompatActivity {
         theme.setTheme_name(theme.getTheme_name());
         int backgroundRes = getResources().getIdentifier(theme.getTheme_name().toLowerCase() + "_header", "drawable", getPackageName());
         if (backgroundRes == 0){
-            //Bitmap bt = ((BitmapDrawable) getDrawable( R.drawable.no_resource_header)).getBitmap();
-            //header.setImageBitmap(Bitmap.createScaledBitmap(bt, s.headerImageWidth, s.headerImageHeight, false));
-
             header.setImageBitmap(Bitmap.createScaledBitmap(s.decodeSampledBitmapFromResource(getResources(), R.drawable.no_resource_header, 200, 200), s.headerImageWidth, s.headerImageHeight, false));
             header.setColorFilter(colorizer);
         }else{
-            //Bitmap bt = ((BitmapDrawable) getDrawable(backgroundRes)).getBitmap();
-            //header.setImageBitmap(Bitmap.createScaledBitmap(bt, s.headerImageWidth, s.headerImageHeight, false));
             header.setImageBitmap(Bitmap.createScaledBitmap(s.decodeSampledBitmapFromResource(getResources(), backgroundRes, 500, 500), s.headerImageWidth, s.headerImageHeight, false));
-
             coordinatorLayout = (CoordinatorLayout) findViewById(R.id.content);
         }
 
@@ -411,112 +407,9 @@ public class ThemeActivity extends AppCompatActivity {
             readyToInstall = true;
             if (installAlreadyClicked) install();
 
-          /*  BitmapWorkerTask t = new BitmapWorkerTask(photos.get(0));
-            t.execute(resources[0]);*/
         }
     }
 
-    //region Commented code
-//
-//
-//Caricamento immagini tutte insieme
-//            for (int i = 0; i < resources.length; i++) {
-//                ImageView im = new ImageView(this);
-//                photos.add(im);
-//            }
-//
-//            BitmapWorkerTask task = new BitmapWorkerTask(photos);
-//            task.execute(resources);*/
-//
-//    class BitmapWorkerTask extends AsyncTask<int[], Void, Bitmap[]> {
-//        private final ArrayList<WeakReference<ImageView>> imageViewList = new ArrayList<>();
-//
-//
-//        public BitmapWorkerTask(ArrayList<ImageView>  imageViews) {
-//            // Use a WeakReference to ensure the ImageView can be garbage collected
-//
-//            for(ImageView im : imageViews){
-//                WeakReference imageViewReference = new WeakReference<ImageView>(im);
-//                imageViewList.add(imageViewReference);
-//            }
-//            System.out.println("Lunghezza " + imageViewList.size());
-//        }
-//
-//        @Override
-//        protected Bitmap[] doInBackground(int[]... params) {
-//            Bitmap[] bitmaps = new Bitmap[params[0].length];
-//            int j = 0;
-//            for (int i = 0; i < bitmaps.length-3; i++) {
-//                Drawable drawable = getDrawable(params[0][i]);
-//                System.out.println(i);
-//                bitmaps [j] = ((BitmapDrawable) drawable).getBitmap();
-//                j++;
-//            }
-//            return bitmaps;
-//        }
-//
-//        @Override
-//        protected void onPostExecute(Bitmap[] bitmaps) {
-//
-//            for (int i = 0; i < imageViewList.size(); i++) {
-//                ImageView im = imageViewList.get(i).get();
-//                Bitmap bm = bitmaps[i];
-//
-//                if (im != null && bm != null) {
-//                    im.setImageBitmap(Bitmap.createScaledBitmap(bm, galleryImageWidth / 2, galleryImageHeight / 2, false));
-//                    myGallery.addView(im);
-//                }
-//
-//            }
-//
-//        }
-//
-//
-//
-//
-//    noinspection SimplifiableIfStatement
-//    if (id == R.id.menu_rate) {
-//        Rate("https://play.google.com/store/apps/details?id=" +getApplicationContext().getPackageName());
-//        Toast.makeText(getApplicationContext(), this.getResources().getString(R.string.rate_thanks), Toast.LENGTH_SHORT).show();
-//    }
-//    if (id == R.id.menu_share) {
-//        Share("https://play.google.com/store/apps/details?id=" +getApplicationContext().getPackageName());
-//    }
-//    if (id == R.id.menu_developer) {
-//        Link(this.getResources().getString(R.string.developer_site));
-//    }
-//    if (id == R.id.menu_mail) {
-//        Mail(this.getResources().getString(R.string.app_name),this.getResources().getString(R.string.email_address));
-//
-//    }
-//    if (id == R.id.community) {
-//        Link(this.getResources().getString(R.string.community_link));
-//
-//    }
-//
-//    public void Share(String playStoreLink) {
-//        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-//        sharingIntent.setType("text/plain");
-//        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, playStoreLink);
-//        startActivity(Intent.createChooser(sharingIntent, "Share via"));
-//    }
-//
-//    public void Rate(String playStoreLink) {
-//        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(playStoreLink));
-//        startActivity(browserIntent);
-//    }
-//
-//    public void Mail(String themeName, String email) {
-//        Intent mailIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + email));
-//        mailIntent.putExtra(Intent.EXTRA_SUBJECT, themeName);
-//        startActivity(mailIntent);
-//    }
-//
-//    public void Link(String link) {
-//        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
-//        startActivity(browserIntent);
-//    }
-    //end region
 
 
 
